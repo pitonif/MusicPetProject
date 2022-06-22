@@ -16,6 +16,7 @@
 		7C980B132862159C00F89236 /* MusicPetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B122862159C00F89236 /* MusicPetTests.swift */; };
 		7C980B1D2862159C00F89236 /* MusicPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B1C2862159C00F89236 /* MusicPetUITests.swift */; };
 		7C980B1F2862159C00F89236 /* MusicPetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B1E2862159C00F89236 /* MusicPetUITestsLaunchTests.swift */; };
+		7C980B2C286351A200F89236 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B2B286351A200F89236 /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7C980B182862159C00F89236 /* MusicPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C980B1C2862159C00F89236 /* MusicPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPetUITests.swift; sourceTree = "<group>"; };
 		7C980B1E2862159C00F89236 /* MusicPetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7C980B2B286351A200F89236 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				7C980AF82862159B00F89236 /* AppDelegate.swift */,
 				7C980AFA2862159B00F89236 /* SceneDelegate.swift */,
 				7C980AFC2862159B00F89236 /* ViewController.swift */,
+				7C980B2D286351C700F89236 /* Extensions */,
 				7C980B042862159C00F89236 /* Assets.xcassets */,
 				7C980B062862159C00F89236 /* LaunchScreen.storyboard */,
 				7C980B092862159C00F89236 /* Info.plist */,
@@ -125,6 +128,14 @@
 				7C980B1E2862159C00F89236 /* MusicPetUITestsLaunchTests.swift */,
 			);
 			path = MusicPetUITests;
+			sourceTree = "<group>";
+		};
+		7C980B2D286351C700F89236 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C980B2B286351A200F89236 /* UIStackView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C980B2C286351A200F89236 /* UIStackView.swift in Sources */,
 				7C980AFD2862159B00F89236 /* ViewController.swift in Sources */,
 				7C980AF92862159B00F89236 /* AppDelegate.swift in Sources */,
 				7C980AFB2862159B00F89236 /* SceneDelegate.swift in Sources */,
