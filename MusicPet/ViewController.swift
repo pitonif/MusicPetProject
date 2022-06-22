@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         
         setupViews()
         setupDelegate()
-        
+        setConstraints()
     }
     
     private func setupViews() {
@@ -124,6 +124,51 @@ extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
-        return true 
+        return true
+    }
+}
+
+//MARK: - Set Constraints
+
+extension ViewController {
+    
+    private func setConstraints() {
+        
+        NSLayoutConstraint.activate([
+                    scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+                    scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+                    scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+                    scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        ])
+        
+        NSLayoutConstraint.activate([
+                    backgroundView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor),
+                    backgroundView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+                    backgroundView.heightAnchor.constraint(equalTo: view.heightAnchor),
+                    backgroundView.widthAnchor.constraint(equalTo: view.widthAnchor)
+                ])
+        
+        NSLayoutConstraint.activate([
+            textFieldsStackView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor),
+            textFieldsStackView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            textFieldsStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 20),
+            textFieldsStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            loginLabel.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            loginLabel.bottomAnchor.constraint(equalTo: textFieldsStackView.topAnchor, constant: -40)
+        ])
+        
+        NSLayoutConstraint.activate([
+            signInButton.heightAnchor.constraint(equalToConstant: 40),
+            signUpButton.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
+        NSLayoutConstraint.activate([
+            buttonsStackView.topAnchor.constraint(equalTo: textFieldsStackView.bottomAnchor, constant: 30),
+            buttonsStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -20),
+            buttonsStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 20)
+        ])
     }
 }
