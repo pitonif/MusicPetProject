@@ -17,6 +17,8 @@
 		7C980B1D2862159C00F89236 /* MusicPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B1C2862159C00F89236 /* MusicPetUITests.swift */; };
 		7C980B1F2862159C00F89236 /* MusicPetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B1E2862159C00F89236 /* MusicPetUITestsLaunchTests.swift */; };
 		7C980B2C286351A200F89236 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B2B286351A200F89236 /* UIStackView.swift */; };
+		7C980B2F28635C8B00F89236 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B2E28635C8B00F89236 /* SignUpViewController.swift */; };
+		7C980B3128635CFE00F89236 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B3028635CFE00F89236 /* AlbumsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		7C980B1C2862159C00F89236 /* MusicPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPetUITests.swift; sourceTree = "<group>"; };
 		7C980B1E2862159C00F89236 /* MusicPetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7C980B2B286351A200F89236 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		7C980B2E28635C8B00F89236 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7C980B3028635CFE00F89236 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				7C980AF82862159B00F89236 /* AppDelegate.swift */,
 				7C980AFA2862159B00F89236 /* SceneDelegate.swift */,
 				7C980AFC2862159B00F89236 /* ViewController.swift */,
+				7C980B3028635CFE00F89236 /* AlbumsViewController.swift */,
+				7C980B2E28635C8B00F89236 /* SignUpViewController.swift */,
 				7C980B2D286351C700F89236 /* Extensions */,
 				7C980B042862159C00F89236 /* Assets.xcassets */,
 				7C980B062862159C00F89236 /* LaunchScreen.storyboard */,
@@ -268,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C980B3128635CFE00F89236 /* AlbumsViewController.swift in Sources */,
+				7C980B2F28635C8B00F89236 /* SignUpViewController.swift in Sources */,
 				7C980B2C286351A200F89236 /* UIStackView.swift in Sources */,
 				7C980AFD2862159B00F89236 /* ViewController.swift in Sources */,
 				7C980AF92862159B00F89236 /* AppDelegate.swift in Sources */,

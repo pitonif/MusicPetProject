@@ -76,6 +76,7 @@ class ViewController: UIViewController {
         
         setupViews()
         setupDelegate()
+        
     }
     
     private func setupViews() {
@@ -105,11 +106,24 @@ class ViewController: UIViewController {
     }
 
     @objc private func signInButtonTapped() {
-        
+        let navigationVC = UINavigationController(rootViewController: AlbumsViewController())
+        navigationVC.modalPresentationStyle = .fullScreen
+        self.present(navigationVC, animated: true)
     }
     
     @objc private func signUpButtonTapped() {
-        
+        let signUpVC = SignUpViewController()
+        self.present(signUpVC, animated: true)
     }
 }
 
+
+//MARK: - UITextFieldDelegate
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true 
+    }
+}
