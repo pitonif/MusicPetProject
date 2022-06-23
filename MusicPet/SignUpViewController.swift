@@ -121,17 +121,80 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
+    private let signUpButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .black
+        button.tintColor = .white
+        button.setTitle("SignUp", for: .normal)
+        button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    var elementStackView = UIStackView()
+    let datePicker = UIDatePicker()
     
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-
-      
+        
+        setupViews()
+        setupDelegate()
     }
     
+    
+    private func setupViews() {
+        title = "SignUp"
+        
+        view.addSubview(scrollView)
+        scrollView.addSubview(backgroundView)
+       
+        
+        elementStackView = UIStackView(arrangedSubviews: [firstNameLabel,
+                                                         firstNameTextField,
+                                                         secondNameLabel,
+                                                         secondNameTextField,
+                                                         ageLabel,
+                                                         datePicker,
+                                                         phoneNumberLabel,
+                                                         phoneNumberTextField,
+                                                         passwordLabel,
+                                                         passwordTextField],
+                                       axis: .vertical,
+                                       spacing: 15,
+                                       distribution: .fillProportionally)
+        
+        backgroundView.addSubview(regLabel)
+        backgroundView.addSubview(signUpButton)
+        backgroundView.addSubview(elementStackView)
+    }
 
-   
+    private func setupDelegate() {
+        firstNameTextField.delegate = self
+        secondNameTextField.delegate = self
+        phoneNumberTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    private func setupDatePicker() {
+        datePicker.datePickerMode = .date
+        datePicker.backgroundColor = .white
+        datePicker.layer.borderColor = #colorLiteral(red: 0.8810099265, green: 0.8810099265, blue: 0.8810099265, alpha: 1)
+        datePicker.layer.borderWidth = 1
+        datePicker.clipsToBounds = true
+        datePicker.layer.cornerRadius = 5
+        datePicker.tintColor = .black
+    }
+    
+    @objc private func signUpButtonTapped() {
+        print("tapp")
+    }
+}
+
+//MARK: - UITextFieldDelegate
+
+extension SignUpViewController: UITextFieldDelegate {
+    
 }
