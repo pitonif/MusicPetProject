@@ -93,6 +93,7 @@ class SignUpViewController: UIViewController {
         label.textColor = .black
         label.text = "E-mail"
         label.font = UIFont.systemFont(ofSize: 10)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -103,7 +104,22 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
+    private let passwordLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "Passowrd"
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
+    private let passwordTextField: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.placeholder = "Create a password"
+        textField.isSecureTextEntry = true
+        return textField
+    }()
     
     
     
