@@ -88,6 +88,23 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
+    private let emailLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "E-mail"
+        label.font = UIFont.systemFont(ofSize: 10)
+        return label
+    }()
+    
+    private let emailTextField: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.placeholder = "Enter e-mail"
+        return textField
+    }()
+    
+    
+    
     
     
     
