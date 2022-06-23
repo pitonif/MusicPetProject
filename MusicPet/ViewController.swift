@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.backgroundColor = .red
         button.tintColor = .white
-        button.setTitle("SignIn", for: .normal)
+        button.setTitle("SignUp", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         return button
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.backgroundColor = .black
         button.tintColor = .white
-        button.setTitle("SignUp", for: .normal)
+        button.setTitle("SignIn", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         return button

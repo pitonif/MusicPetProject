@@ -33,7 +33,7 @@ class SignUpViewController: UIViewController {
     private let firstNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.text = "First name"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -49,7 +49,7 @@ class SignUpViewController: UIViewController {
     private let secondNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.text = "Second name"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -66,7 +66,7 @@ class SignUpViewController: UIViewController {
         let label = UILabel()
         label.textColor = .black
         label.text = "Age"
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -75,7 +75,7 @@ class SignUpViewController: UIViewController {
         let label = UILabel()
         label.textColor = .black
         label.text = "Phone number"
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -92,7 +92,7 @@ class SignUpViewController: UIViewController {
         let label = UILabel()
         label.textColor = .black
         label.text = "E-mail"
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -108,7 +108,7 @@ class SignUpViewController: UIViewController {
         let label = UILabel()
         label.textColor = .black
         label.text = "Passowrd"
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -141,6 +141,8 @@ class SignUpViewController: UIViewController {
         
         setupViews()
         setupDelegate()
+        setupConstraints()
+        setupDatePicker()
     }
     
     
@@ -162,7 +164,7 @@ class SignUpViewController: UIViewController {
                                                          passwordLabel,
                                                          passwordTextField],
                                        axis: .vertical,
-                                       spacing: 15,
+                                       spacing: 13,
                                        distribution: .fillProportionally)
         
         backgroundView.addSubview(regLabel)
@@ -184,7 +186,7 @@ class SignUpViewController: UIViewController {
         datePicker.layer.borderColor = #colorLiteral(red: 0.8810099265, green: 0.8810099265, blue: 0.8810099265, alpha: 1)
         datePicker.layer.borderWidth = 1
         datePicker.clipsToBounds = true
-        datePicker.layer.cornerRadius = 5
+        datePicker.layer.cornerRadius = 10
         datePicker.tintColor = .black
     }
     
@@ -197,4 +199,57 @@ class SignUpViewController: UIViewController {
 
 extension SignUpViewController: UITextFieldDelegate {
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            
+            return false
+        }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        firstNameTextField.becomeFirstResponder()
+        secondNameTextField.becomeFirstResponder()
+        emailTextField.becomeFirstResponder()
+        passwordTextField.becomeFirstResponder()
+        return true
+    }
+}
+
+//MARK: - SetConstraints
+
+extension SignUpViewController {
+    
+    private func setupConstraints() {
+        
+        NSLayoutConstraint.activate([
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        ])
+        
+        NSLayoutConstraint.activate([
+            backgroundView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            backgroundView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor),
+            backgroundView.heightAnchor.constraint(equalTo: view.heightAnchor),
+            backgroundView.widthAnchor.constraint(equalTo: view.widthAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            elementStackView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            elementStackView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor),
+            elementStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -20),
+            elementStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            regLabel.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            regLabel.bottomAnchor.constraint(equalTo: elementStackView.topAnchor, constant: -40)
+        ])
+    
+        NSLayoutConstraint.activate([
+            signUpButton.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            signUpButton.topAnchor.constraint(equalTo: elementStackView.bottomAnchor, constant: 20),
+            signUpButton.heightAnchor.constraint(equalToConstant: 40),
+            signUpButton.widthAnchor.constraint(equalToConstant: 300)
+        ])
+    }
 }
