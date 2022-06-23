@@ -43,7 +43,6 @@ class SignUpViewController: UIViewController {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = "Enter first name"
-        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
@@ -60,9 +59,36 @@ class SignUpViewController: UIViewController {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = "Enter second name"
-        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
+    
+    private let ageLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "Age"
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let phoneNumberLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "Phone number"
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let phoneNumberTextField: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.placeholder = "Enter phone number"
+        textField.keyboardType = .numberPad
+        return textField
+    }()
+    
+    
     
     
 
