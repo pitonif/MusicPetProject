@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C1018CE2866018400FFB750 /* DetailAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1018CD2866018400FFB750 /* DetailAlbumViewController.swift */; };
 		7C833AED2865F24800DC4874 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C833AEC2865F24800DC4874 /* AlbumsTableViewCell.swift */; };
 		7C833AEF2865F4FA00DC4874 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C833AEE2865F4FA00DC4874 /* UIViewController.swift */; };
 		7C980AF92862159B00F89236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980AF82862159B00F89236 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 		7C980B2C286351A200F89236 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B2B286351A200F89236 /* UIStackView.swift */; };
 		7C980B2F28635C8B00F89236 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B2E28635C8B00F89236 /* SignUpViewController.swift */; };
 		7C980B3128635CFE00F89236 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B3028635CFE00F89236 /* AlbumsViewController.swift */; };
+		7CB543272866029100EA7C37 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB543262866029100EA7C37 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C1018CD2866018400FFB750 /* DetailAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumViewController.swift; sourceTree = "<group>"; };
 		7C833AEC2865F24800DC4874 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
 		7C833AEE2865F4FA00DC4874 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7C980AF52862159B00F89236 /* MusicPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +62,7 @@
 		7C980B2B286351A200F89236 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		7C980B2E28635C8B00F89236 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		7C980B3028635CFE00F89236 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		7CB543262866029100EA7C37 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				7C980AFA2862159B00F89236 /* SceneDelegate.swift */,
 				7C980AFC2862159B00F89236 /* ViewController.swift */,
 				7C980B3028635CFE00F89236 /* AlbumsViewController.swift */,
+				7CB543262866029100EA7C37 /* UserInfoViewController.swift */,
+				7C1018CD2866018400FFB750 /* DetailAlbumViewController.swift */,
 				7C833AEC2865F24800DC4874 /* AlbumsTableViewCell.swift */,
 				7C980B2E28635C8B00F89236 /* SignUpViewController.swift */,
 				7C980B2D286351C700F89236 /* Extensions */,
@@ -285,6 +291,8 @@
 				7C833AEF2865F4FA00DC4874 /* UIViewController.swift in Sources */,
 				7C980B2C286351A200F89236 /* UIStackView.swift in Sources */,
 				7C833AED2865F24800DC4874 /* AlbumsTableViewCell.swift in Sources */,
+				7CB543272866029100EA7C37 /* UserInfoViewController.swift in Sources */,
+				7C1018CE2866018400FFB750 /* DetailAlbumViewController.swift in Sources */,
 				7C980AFD2862159B00F89236 /* ViewController.swift in Sources */,
 				7C980AF92862159B00F89236 /* AppDelegate.swift in Sources */,
 				7C980AFB2862159B00F89236 /* SceneDelegate.swift in Sources */,
