@@ -9,7 +9,7 @@ import UIKit
 
 class AlbumsViewController: UIViewController {
     
-    let tableView: UITableView = {
+    private let tableView: UITableView = {
         let view = UITableView()
         view.backgroundColor = .white
         view.register(AlbumsTableViewCell.self, forCellReuseIdentifier: "cell")
@@ -17,15 +17,41 @@ class AlbumsViewController: UIViewController {
         return view
     }()
     
+    private let searchController = UISearchController(searchResultsController: nil)
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-
        
+        setupViews()
+        setupDelegate()
+        setupNavigationBar()
     }
     
+    private func setupViews() {
+        view.backgroundColor = .white
+        view.addSubview(tableView)
+    }
+    
+    private func setupDelegate() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        searchController.searchBar.delegate = self
+    }
 
+    private func setupNavigationBar() {
+        navigationItem.title = "Albums"
+        
+        navigationItem.searchController = searchController
+        
+        let userInfoButton = createCustomButton(selector: #selector(<#T##@objc method#>))
+        navigationItem.rightBarButtonItem = userInfoButton
+    }
+    
+    private func setupSearchBar() {
+        searchController.searchBar.placeholder = "Search"
+        searchController.obscuresBackgroundDuringPresentation = true
+    }
    
+    @objc func 
 }
