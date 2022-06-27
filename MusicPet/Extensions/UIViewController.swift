@@ -13,6 +13,7 @@ extension UIViewController {
         
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "person.png"), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
         button.tintColor = .black
         button.addTarget(self, action: selector, for: .touchUpInside)
         
