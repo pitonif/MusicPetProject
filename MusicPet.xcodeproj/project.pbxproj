@@ -23,6 +23,7 @@
 		7C980B2F28635C8B00F89236 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B2E28635C8B00F89236 /* SignUpViewController.swift */; };
 		7C980B3128635CFE00F89236 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C980B3028635CFE00F89236 /* AlbumsViewController.swift */; };
 		7CB543272866029100EA7C37 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB543262866029100EA7C37 /* UserInfoViewController.swift */; };
+		7CB54329286B1F2D00EA7C37 /* SongsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB54328286B1F2C00EA7C37 /* SongsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		7C980B2E28635C8B00F89236 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		7C980B3028635CFE00F89236 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		7CB543262866029100EA7C37 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		7CB54328286B1F2C00EA7C37 /* SongsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				7C980B3028635CFE00F89236 /* AlbumsViewController.swift */,
 				7CB543262866029100EA7C37 /* UserInfoViewController.swift */,
 				7C1018CD2866018400FFB750 /* DetailAlbumViewController.swift */,
+				7CB54328286B1F2C00EA7C37 /* SongsCollectionViewCell.swift */,
 				7C833AEC2865F24800DC4874 /* AlbumsTableViewCell.swift */,
 				7C980B2E28635C8B00F89236 /* SignUpViewController.swift */,
 				7C980B2D286351C700F89236 /* Extensions */,
@@ -291,6 +294,7 @@
 				7C833AEF2865F4FA00DC4874 /* UIViewController.swift in Sources */,
 				7C980B2C286351A200F89236 /* UIStackView.swift in Sources */,
 				7C833AED2865F24800DC4874 /* AlbumsTableViewCell.swift in Sources */,
+				7CB54329286B1F2D00EA7C37 /* SongsCollectionViewCell.swift in Sources */,
 				7CB543272866029100EA7C37 /* UserInfoViewController.swift in Sources */,
 				7C1018CE2866018400FFB750 /* DetailAlbumViewController.swift in Sources */,
 				7C980AFD2862159B00F89236 /* ViewController.swift in Sources */,
