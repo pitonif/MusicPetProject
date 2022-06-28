@@ -9,4 +9,10 @@ import UIKit
 
 class SongsCollectionViewCell: UICollectionViewCell {
     
+    let nameSongLabel: UILabel = {
+           let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
+    
 }

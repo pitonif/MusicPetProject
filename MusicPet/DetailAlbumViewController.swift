@@ -66,10 +66,78 @@ class DetailAlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        setupViews()
+        setupDelegate()
     }
     
+    private func setupViews() {
+        view.backgroundColor = .white
+        view.addSubview(albumLogoView)
+        
+        stackView = UIStackView(arrangedSubviews: [albumNameLabel,
+                                                   artistNameLabel,
+                                                   releaseDataLabel,
+                                                   trackCountLabel],
+                                axis: .vertical,
+                                spacing: 10,
+                                distribution: .fillProportionally)
+        
+        view.addSubview(stackView)
+        view.addSubview(collectionView)
+    }
+    
+    private func setupDelegate() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+}
 
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+
+extension DetailAlbumViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+       10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SongsCollectionViewCell
+        cell.nameSongLabel.text = "Name song"
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: collectionView.frame.width,
+               height: 20)
+    }
+}
+  
+//MARK: - Constraints
+
+extension DetailAlbumViewController {
+    
+    private func setupConstraints() {
+        
+        NSLayoutConstraint.activate([
+            albumLogoView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            albumLogoView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            albumLogoView.heightAnchor.constraint(equalToConstant: 100),
+            albumLogoView.widthAnchor.constraint(equalToConstant: 100)
+        ])
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            stackView.leadingAnchor.constraint(equalTo: albumLogoView.trailingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 15)
+        ])
+    }
+}
     
 
-}
