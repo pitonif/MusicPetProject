@@ -68,6 +68,7 @@ class DetailAlbumViewController: UIViewController {
 
         setupViews()
         setupDelegate()
+        setupConstraints()
     }
     
     private func setupViews() {
@@ -103,6 +104,7 @@ extension DetailAlbumViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SongsCollectionViewCell
         cell.nameSongLabel.text = "Name song"
+        cell.nameSongLabel.tintColor = .black
         return cell
     }
     
